@@ -1,3 +1,8 @@
+# Note 2024-06-04 This fork is currently inactive!
+Our local mods to autocert have been merged back to origin, so this fork is no longer required.  
+Also, we have a stream of FIPS images from smallstep which we are using in govcloud (and eventually in Commercial).
+bdelvecchio@wasabi.com
+
 ![Autocert architecture diagram](https://raw.githubusercontent.com/smallstep/autocert/master/autocert-logo.png)
 
 # Autocert
