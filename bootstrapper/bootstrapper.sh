@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -f "$CRT" ] && [ -f "$KEY" ];
+if [ -f "$CRT" ];
 then
     echo "Found existing $CRT. This can happen in daemonset pods after node reboot. If the certificate is expired, renewal will fail. Raising an error to force recreation of the autocert-bootstrapper container."
     exit 1
