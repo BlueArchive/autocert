@@ -1,10 +1,9 @@
 #!/bin/sh
 
-
-if [ -f "$STEP_ROOT" ] && [ -f "$CRT" ] && [ -f "$KEY" ];
+if [ -f "$CRT" ] && [ -f "$KEY" ];
 then
-    echo "Found existing $STEP_ROOT, $CRT, and $KEY, skipping bootstrap"
-    exit 0
+    echo "Found existing $CRT. This can happen in daemonset pods after node reboot. If the certificate is expired, renewal will fail. Raising an error to force recreation of the autocert-bootstrapper container."
+    exit 1
 fi
 
 # Download the root certificate and set permissions
